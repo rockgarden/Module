@@ -59,6 +59,10 @@ class PhotoCollectionViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
 }
 
 extension PhotoCollectionViewController {

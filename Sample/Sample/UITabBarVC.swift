@@ -28,9 +28,12 @@ class UITabBarVC: UITabBarController {
     }
 
     override var preferredStatusBarStyle : UIStatusBarStyle {
-        return .lightContent
+        return selectedViewController?.preferredStatusBarStyle ?? .lightContent
     }
 
+    override var prefersStatusBarHidden: Bool {
+        return selectedViewController?.prefersStatusBarHidden ?? false
+    }
 
     fileprivate func loadDefaultVC() -> [UIViewController] {
         let main = MainVC()
@@ -39,7 +42,7 @@ class UITabBarVC: UITabBarController {
         let my = PhotoCollectionViewController()
         my.tabBarItem = UITabBarItem(title: "我的", image: UIImage(named: "cm_photo_library_white"), selectedImage: UIImage(named: "cm_photo_library_white"))
         let n_My = UINavigationController(rootViewController: my)
-        return [n_Main,n_My]
+        return [n_Main,my]
     }
 
     

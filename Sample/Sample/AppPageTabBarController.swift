@@ -37,6 +37,10 @@ class AppPageTabBarController: PageTabBarController {
         view.backgroundColor = Color.blueGrey.lighten5
         delegate = self
         preparePageTabBar()
+
+        Motion.delay(3) { [weak self] in
+            self?.selectedIndex = 2
+        }
     }
 }
 
@@ -44,9 +48,11 @@ extension AppPageTabBarController {
     
     fileprivate func preparePageTabBar() {
         pageTabBarAlignment = .top
+
         pageTabBar.lineColor = Color.blueGrey.base
         pageTabBar.dividerColor = nil // Color.blueGrey.lighten5
         pageTabBar.backgroundColor = Color.blue.darken2
+        
         pageTabBar.lineAlignment = .bottom
     }
     
@@ -54,6 +60,6 @@ extension AppPageTabBarController {
 
 extension AppPageTabBarController: PageTabBarControllerDelegate {
     func pageTabBarController(pageTabBarController: PageTabBarController, didTransitionTo viewController: UIViewController) {
-        print("pageTabBarController", pageTabBarController, "didTransitionTo viewController:", viewController)
+        //print("pageTabBarController", pageTabBarController, "didTransitionTo viewController:", viewController)
     }
 }

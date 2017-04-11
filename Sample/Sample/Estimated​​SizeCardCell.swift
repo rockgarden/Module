@@ -44,15 +44,15 @@ class Estimated​​SizeCardCell: CollectionViewCell {
         }
     }
 
-//    /// Calculating dynamic height.
-//    open override var height: CGFloat {
-//        get {
-//            return card.height
-//        }
-//        set(value) {
-//            super.height = value
-//        }
-//    }
+    /// Calculating dynamic height.
+    open override var height: CGFloat {
+        get {
+            return card.height
+        }
+        set(value) {
+            super.height = value
+        }
+    }
 
     override func layoutSubviews() {
         super.layoutSubviews()

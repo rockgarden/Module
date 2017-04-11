@@ -50,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let graph = Graph()
         let search = Search<Entity>(graph: graph).for(types: "Category")
         var viewControllers = [PostsViewController]()
+        debugPrint(search.sync().count)
         for category in search.sync() {
             if let name = category["name"] as? String {
                 viewControllers.append(PostsViewController(category: name))

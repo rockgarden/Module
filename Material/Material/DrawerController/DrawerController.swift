@@ -97,9 +97,12 @@ public protocol DrawerControllerDelegate {
 open class DrawerController: UIViewController, UIGestureRecognizerDelegate {
 
     override open var preferredStatusBarStyle : UIStatusBarStyle {
-        return .lightContent
+        return contentMap[.none]?.viewController.preferredStatusBarStyle ?? .lightContent
     }
 
+    override open var prefersStatusBarHidden: Bool {
+        return contentMap[.none]?.viewController.prefersStatusBarHidden ?? false
+    }
 
     override open var shouldAutorotate : Bool {
         return false
@@ -215,6 +218,7 @@ open class DrawerController: UIViewController, UIGestureRecognizerDelegate {
         guard let content = self.contentMap[side] else { return false }
         return content.isBringToFront
     }
+    
     public func setBringToFront(isBringToFront: Bool, side: DrawerSide) {
         guard let content = self.contentMap[side] else { return }
         content.isBringToFront = isBringToFront

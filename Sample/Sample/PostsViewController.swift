@@ -51,7 +51,7 @@ class PostsViewController: UIViewController {
         //automaticallyAdjustsScrollViewInsets = false
         
         // Feed.
-        prepareTableView()
+        //prepareTableView()
         prepareCollectionView()
     }
     
@@ -85,7 +85,7 @@ extension PostsViewController {
 extension PostsViewController {
     internal func prepareTableView() {
         tableView = CardTableView()
-        //view.layout(tableView).edges()
+        view.layout(tableView).edges()
     }
 
     internal func prepareCollectionView() {
@@ -99,6 +99,6 @@ extension PostsViewController {
         }
         //tableView.data = data
         collectionView.data = data
-        toolbar.detail = "\(tableView.data.count) " + (1 == tableView.data.count ? "Article" : "Articles")
+        toolbar.detail = "\(data.count) " + (1 == data.count ? "Article" : "Articles")
     }
 }

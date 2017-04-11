@@ -48,11 +48,6 @@ class EstimatedSizeCollectionView: UICollectionView, UICollectionViewDataSource,
         flow.minimumLineSpacing = 10
         flow.sectionInset = UIEdgeInsetsMake(10, 0, 10, 0)
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        reloadData()
-    }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
