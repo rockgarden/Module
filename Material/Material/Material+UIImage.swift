@@ -51,47 +51,30 @@ extension UIImage {
 
 extension UIImage {
     /**
-     Resizes an image based on a given width.
-     - Parameter toWidth w: A width value.
-     - Returns: An optional UIImage.
-     */
-    open func resize(toWidth w: CGFloat) -> UIImage? {
-        return internalResize(toWidth: w)
-    }
-    
-    /**
-     Resizes an image based on a given height.
-     - Parameter toHeight h: A height value.
-     - Returns: An optional UIImage.
-     */
-    open func resize(toHeight h: CGFloat) -> UIImage? {
-        return internalResize(toHeight: h)
-    }
-    
-    /**
-     Internally resizes the image.
+     resizes the image.
      - Parameter toWidth tw: A width.
      - Parameter toHeight th: A height.
      - Returns: An optional UIImage.
      */
-    private func internalResize(toWidth tw: CGFloat = 0, toHeight th: CGFloat = 0) -> UIImage? {
+    open func resize(toWidth tw: CGFloat = 0, toHeight th: CGFloat = 0) -> UIImage? {
         var w: CGFloat?
         var h: CGFloat?
         
-        if 0 < tw {
+        if 0 < tw && th == 0 {
             h = height * tw / width
-        } else if 0 < th {
+        }
+        if tw == 0 && 0 < th {
             w = width * th / height
         }
         
-        let g: UIImage?
+        let i: UIImage?
         let t: CGRect = CGRect(x: 0, y: 0, width: w ?? tw, height: h ?? th)
         UIGraphicsBeginImageContextWithOptions(t.size, false, Screen.scale)
         draw(in: t, blendMode: .normal, alpha: 1)
-        g = UIGraphicsGetImageFromCurrentImageContext()
+        i = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return g
+        return i
     }
 }
 
