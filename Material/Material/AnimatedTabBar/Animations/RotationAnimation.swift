@@ -91,7 +91,7 @@ open class RotationAnimation : ItemAnimation {
     let rotateAnimation = CABasicAnimation(keyPath: Constants.AnimationKeys.Rotation)
     rotateAnimation.fromValue = 0.0
     
-    var toValue = CGFloat(M_PI * 2.0)
+    var toValue = CGFloat(Double.pi * 2.0)
     if direction != nil && direction == RotationDirection.left {
       toValue = toValue * -1.0
     }
