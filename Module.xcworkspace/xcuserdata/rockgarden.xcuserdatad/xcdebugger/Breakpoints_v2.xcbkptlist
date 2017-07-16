@@ -42,7 +42,7 @@
                   moduleName = "Sample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rockgarden/GitHub/Module/Sample/Sample/UITabBarVC.swift"
-                  timestampString = "513618379.760805"
+                  timestampString = "521878021.221203"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
@@ -57,7 +57,7 @@
                   moduleName = "Sample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rockgarden/GitHub/Module/Sample/Sample/UITabBarVC.swift"
-                  timestampString = "513618379.76561"
+                  timestampString = "521878021.226091"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
@@ -90,7 +90,7 @@
                   moduleName = "Sample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rockgarden/GitHub/Module/Sample/Sample/UITabBarVC.swift"
-                  timestampString = "513618379.778699"
+                  timestampString = "521878021.238098"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -105,7 +105,7 @@
                   moduleName = "Sample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rockgarden/GitHub/Module/Sample/Sample/UITabBarVC.swift"
-                  timestampString = "513618379.783615"
+                  timestampString = "521878021.242875"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -113,6 +113,22 @@
                   offsetFromSymbolStart = "13">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sample/Sample/CardVC.swift"
+            timestampString = "521877002.980489"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "prepareImageCard()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

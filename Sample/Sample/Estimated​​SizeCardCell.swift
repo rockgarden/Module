@@ -12,7 +12,7 @@ import Graph
 
 let Estimated​​SizeCardCellReuseId = "Estimated​​SizeCardCell"
 
-class Estimated​​SizeCardCell: CollectionViewCell {
+class Estimated​​SizeCardCell: UICollectionViewCell {
 
     /// A boolean that indicates whether the cell is the last cell.
     public var isLast = false
@@ -40,49 +40,80 @@ class Estimated​​SizeCardCell: CollectionViewCell {
 
     public var data: Entity? {
         didSet {
-            layoutSubviews()
+//            layoutSubviews()
+            guard let d = data else {
+                return
+            }
+
+            toolbar.title = d["title"] as? String
+            let s = d["detail"] as? String
+            toolbar.detail = s! + "注意： 不要在 xib 或者 Storyboard 给控件添加约束，因为这样添加上 top 和 left 会直接添加到 cell 上，而不是cell.contentView 上。(如果你是纯代码选手，请忽视这一点。)"
+
+            if let image = d["photo"] as? UIImage {
+                imageView.height = image.height
+                DispatchQueue.main.async { [weak self, image = image] in
+                    self?.imageView.image = image
+                }
+            }
+
+            let c = d["content"] as? String
+            contentLabel.text = c! + "注意： 不要在 xib 或者 Storyboard 给控件添加约束，因为这样添加上 top 和 left 会直接添加到 cell 上，而不是cell.contentView 上。(如果你是纯代码选手，请忽视这一点。), 注意： 不要在 xib 或者 Storyboard 给控件添加约束，因为这样添加上 top 和 left 会直接添加到 cell 上，而不是cell.contentView 上。(如果你是纯代码选手，请忽视这一点。), 注意： 不要在 xib 或者 Storyboard 给控件添加约束，因为这样添加上 top 和 left 会直接添加到 cell 上，而不是cell.contentView 上。(如果你是纯代码选手，请忽视这一点。), 注意： 不要在 xib 或者 Storyboard 给控件添加约束，因为这样添加上 top 和 left 会直接添加到 cell 上，而不是cell.contentView 上。(如果你是纯代码选手，请忽视这一点。)"
+
+            dateLabel.text = dateFormatter.string(from: d.createdDate)
+
+            //        card.x = 0
+            //        card.y = 0
+            //        card.width = Screen.width
+            //        // TODO: 奇怪的 height
+            //        card.height = height
+            //        
+            card.setNeedsLayout()
+            card.layoutIfNeeded()
+
         }
     }
 
     /// Calculating dynamic height.
-    open override var height: CGFloat {
-        get {
-            return card.height
-        }
-        set(value) {
-            super.height = value
-        }
-    }
+//    open override var height: CGFloat {
+//        get {
+//            return card.height
+//        }
+//        set(value) {
+//            super.height = value
+//        }
+//    }
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        guard let d = data else {
-            return
-        }
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        guard let d = data else {
+//            return
+//        }
+//
+//        toolbar.title = d["title"] as? String
+//        let s = d["detail"] as? String
+//        toolbar.detail = s! + "注意： 不要在 xib 或者 Storyboard 给控件添加约束，因为这样添加上 top 和 left 会直接添加到 cell 上，而不是cell.contentView 上。(如果你是纯代码选手，请忽视这一点。)"
+//
+//        if let image = d["photo"] as? UIImage {
+//            imageView.height = image.height
+//            DispatchQueue.main.async { [weak self, image = image] in
+//                self?.imageView.image = image
+//            }
+//        }
+//
+//        let c = d["content"] as? String
+//        contentLabel.text = c! + "注意： 不要在 xib 或者 Storyboard 给控件添加约束，因为这样添加上 top 和 left 会直接添加到 cell 上，而不是cell.contentView 上。(如果你是纯代码选手，请忽视这一点。), 注意： 不要在 xib 或者 Storyboard 给控件添加约束，因为这样添加上 top 和 left 会直接添加到 cell 上，而不是cell.contentView 上。(如果你是纯代码选手，请忽视这一点。), 注意： 不要在 xib 或者 Storyboard 给控件添加约束，因为这样添加上 top 和 left 会直接添加到 cell 上，而不是cell.contentView 上。(如果你是纯代码选手，请忽视这一点。), 注意： 不要在 xib 或者 Storyboard 给控件添加约束，因为这样添加上 top 和 left 会直接添加到 cell 上，而不是cell.contentView 上。(如果你是纯代码选手，请忽视这一点。)"
+//
+//        dateLabel.text = dateFormatter.string(from: d.createdDate)
+//
+//        card.x = 0
+//        card.y = 0
+//        card.width = Screen.width
+//        // TODO: 奇怪的 height
+//        card.height = height
+//        
+//        card.setNeedsLayout()
+//        card.layoutIfNeeded()
 
-        toolbar.title = d["title"] as? String
-        toolbar.detail = d["detail"] as? String
-
-        if let image = d["photo"] as? UIImage {
-            imageView.height = image.height
-            DispatchQueue.main.async { [weak self, image = image] in
-                self?.imageView.image = image
-            }
-        }
-
-        contentLabel.text = d["content"] as? String
-
-        dateLabel.text = dateFormatter.string(from: d.createdDate)
-
-        card.x = 0
-        card.y = 0
-        card.width = Screen.width
-        // TODO: 奇怪的 height
-        card.height = height
-        
-        card.setNeedsLayout()
-        card.layoutIfNeeded()
-        
 //        debugPrint("card.frame and cell.frame", card.frame, frame)
 //        var cf = contentView.frame
 //        cf.size = card.frame.size
@@ -93,13 +124,32 @@ class Estimated​​SizeCardCell: CollectionViewCell {
 //        frame = f
 //        
 //        debugPrint("card.frame and cell.frame", card.frame, frame)
+//    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        prepare()
     }
 
-    open override func prepare() {
-        super.prepare()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
 
-        layer.rasterizationScale = Screen.scale
+        /// Rasterize the cells for performance
         layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale
+        layer.cornerRadius = 0
+        layer.masksToBounds = true
+        clipsToBounds = true
+        backgroundColor = UIColor.white
+
+        prepare()
+    }
+
+    func prepare() {
+        //super.prepare()
+
+//        layer.rasterizationScale = Screen.scale
+//        layer.shouldRasterize = true
 
         //pulseAnimation = .none
         backgroundColor = nil
@@ -185,7 +235,7 @@ class Estimated​​SizeCardCell: CollectionViewCell {
 
         contentView.addSubview(card)
         /// 必须执行, 这样才可在首次加载时
-        layout(card).edges()
+        layout.vertically().edges()
     }
 
 }

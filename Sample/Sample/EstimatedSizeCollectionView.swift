@@ -43,7 +43,7 @@ class EstimatedSizeCollectionView: UICollectionView, UICollectionViewDataSource,
 
         let flow = collectionViewLayout as! UICollectionViewFlowLayout
         /// FIXME: 无法使用 estimatedItemSize
-        //flow.itemSize = CGSize(width:self.frame.width, height:100)
+        flow.itemSize = CGSize(width:self.frame.width, height:100)
         flow.scrollDirection = .vertical
         flow.minimumLineSpacing = 10
         flow.sectionInset = UIEdgeInsetsMake(10, 0, 10, 0)
@@ -66,7 +66,7 @@ class EstimatedSizeCollectionView: UICollectionView, UICollectionViewDataSource,
         //cell.setNeedsLayout()
         //cell.layoutIfNeeded()
         
-        heights[indexPath] = cell.card.height
+        //heights[indexPath] = cell.card.height
         
         return cell
     }
@@ -75,8 +75,8 @@ class EstimatedSizeCollectionView: UICollectionView, UICollectionViewDataSource,
 
 extension EstimatedSizeCollectionView: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        debugPrint(heights[indexPath] as Any)
-        return CGSize(width: self.frame.width, height: heights[indexPath] ?? height)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        debugPrint(heights[indexPath] as Any)
+//        return CGSize(width: self.frame.width, height: heights[indexPath] ?? height)
+//    }
 }

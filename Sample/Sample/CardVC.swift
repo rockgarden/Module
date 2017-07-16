@@ -62,18 +62,22 @@ extension CardVC {
     fileprivate func prepareToolbar() {
         toolbar = Toolbar(rightViews: [moreButton])
         
-        toolbar.title = "Material"
+//        toolbar.title = "Material"
         toolbar.titleLabel.textAlignment = .left
-        
-        toolbar.detail = "Build Beautiful Software"
+        toolbar.heightPreset = .xlarge
+//        toolbar.detail = "Build Beautiful Software"
+        toolbar.interimSpacePreset = .interimSpace10
         toolbar.detailLabel.textAlignment = .left
         toolbar.detailLabel.textColor = Color.grey.base
+        toolbar.dividerColor = Color.grey.lighten3
+        toolbar.dividerAlignment = .top
+        toolbar.dividerContentEdgeInsetsPreset = .horizontally2
     }
     
     fileprivate func prepareContentView() {
         contentView = UILabel()
         contentView.numberOfLines = 0
-        contentView.text = "Material is an animation and graphics framework that is used to create beautiful applications."
+//        contentView.text = "Material is an animation and graphics framework that is used to create beautiful applications."
         contentView.font = RobotoFont.regular(with: 14)
     }
     
@@ -86,7 +90,9 @@ extension CardVC {
     
     fileprivate func prepareImageCard() {
         card = Card()
-        
+//        toolbar.translatesAutoresizingMaskIntoConstraints = false
+//        contentView.translatesAutoresizingMaskIntoConstraints = false
+//        bottomBar.translatesAutoresizingMaskIntoConstraints = false
         card.toolbar = toolbar
         card.toolbarEdgeInsetsPreset = .square3
         card.toolbarEdgeInsets.bottom = 0
@@ -97,8 +103,10 @@ extension CardVC {
         
         card.bottomBar = bottomBar
         card.bottomBarEdgeInsetsPreset = .wideRectangle2
-        
+        debugPrint(card.frame)
+        print(view)
         view.layout(card).horizontally(left: 20, right: 20).center()
+        debugPrint(card.frame)
     }
 
     fileprivate func prepareTabBarItem() {

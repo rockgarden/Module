@@ -139,7 +139,8 @@ public struct Grid {
         }
     }
     
-    /// A preset wrapper for interim space.
+    /// A preset wrapper for interim space. 
+    /// 预设的网格间隙
     public var interimSpacePreset = InterimSpacePreset.none {
         didSet {
             interimSpace = InterimSpacePresetToValue(preset: interimSpacePreset)

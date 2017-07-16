@@ -31,6 +31,14 @@
 import UIKit
 
 @objc(HeightPreset)
+/// 预设高度
+/// 注意: 使用Constraints时不要设置!
+/// - `default`: 44
+/// - normal: 49
+/// - medium: 52
+/// - large: 60
+/// - xlarge: 68
+/// - xxlarge: 104
 public enum HeightPreset: Int {
     case none = 0
     case tiny = 20

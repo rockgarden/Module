@@ -320,10 +320,9 @@
 			children = (
 				4462AE951EA4EAAF006299C8 /* Assets.xcassets */,
 				440DA4B41E9D1270005A87C4 /* Button.swift */,
-				440DA4B51E9D1270005A87C4 /* Card.swift */,
+				444632E11F1B125500C45E58 /* Card */,
 				440DA4B61E9D1270005A87C4 /* CharacterAttribute.swift */,
 				440DA4B71E9D1270005A87C4 /* Font.swift */,
-				440DA4B81E9D1270005A87C4 /* ImageCard.swift */,
 				440DA4B91E9D1270005A87C4 /* Material+Array.swift */,
 				440DA4BA1E9D1270005A87C4 /* Material+Motion.swift */,
 				440DA4BB1E9D1270005A87C4 /* Material+MotionAnimation.swift */,
@@ -547,6 +546,15 @@
 				440DA5301E9D1270005A87C4 /* RemindersController.swift */,
 			);
 			path = Reminders;
+			sourceTree = "<group>";
+		};
+		444632E11F1B125500C45E58 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				440DA4B51E9D1270005A87C4 /* Card.swift */,
+				440DA4B81E9D1270005A87C4 /* ImageCard.swift */,
+			);
+			name = Card;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -974,6 +982,7 @@
 				44EF19A21EAE17600028B825 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

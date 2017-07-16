@@ -61,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let menuController = AppFABMenuController(rootViewController: toolbarController)
 
         window = UIWindow(frame: Screen.bounds)
-        window!.rootViewController = appDC
+        window!.rootViewController = menuController
         window!.makeKeyAndVisible()
 
         return true
