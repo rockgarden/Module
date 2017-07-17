@@ -35,46 +35,76 @@ class GridVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
         prepareHorizontalExample()
-        //prepareVerticalExample()
     }
 }
 
 extension GridVC {
     fileprivate func prepareHorizontalExample() {
-        let container = View()
+        let container = UIView()
         container.backgroundColor = nil
-        container.shapePreset = .square
-        
+        container.shapePreset = .none
+        container.grid.axis.direction = .horizontal
         container.grid.interimSpacePreset = .interimSpace3
         
-        view.layout(container).top(100).left(20).right(20)
-        
-        for _ in 0..<12 {
-            let v = View()
-            v.grid.columns = 1
-            v.backgroundColor = Color.blue.base
-            container.grid.views.append(v)
-        }
-    }
-    
-    fileprivate func prepareVerticalExample() {
-        let container = View()
-        container.backgroundColor = nil
-        container.shapePreset = .square
-        
-        container.grid.axis.direction = .vertical
-        container.grid.interimSpacePreset = .interimSpace3
-        
-        view.layout(container).top(100).left(20).right(20)
-        
-        for _ in 0..<12 {
-            let v = View()
+        view.layout(container).edges()
+        debugPrint(container)
+        for i in 0..<3 {
+            let v = UILabel()
+            //v.translatesAutoresizingMaskIntoConstraints = false
+            v.text = "row\(i)"
             v.grid.rows = 1
             v.backgroundColor = Color.blue.base
             container.grid.views.append(v)
+            debugPrint(v)
+            prepareVerticalExample(v,row:i)
         }
+    }
+    
+    fileprivate func prepareVerticalExample(_ vP: UIView,row: Int) {
+        let container = UIView()
+        container.backgroundColor = nil
+        container.shapePreset = .square
+        container.grid.axis.direction = .horizontal
+        container.grid.interimSpacePreset = .interimSpace3
+        
+        vP.layout(container).edges()
+        debugPrint(container)
+        switch row {
+        case 0:
+            for j in 0..<2 {
+                let v = UILabel()
+                //v.translatesAutoresizingMaskIntoConstraints = false
+                v.text = "columns\(j)"
+                v.grid.rows = 0
+                v.backgroundColor = Color.white
+                container.grid.views.append(v)
+            }
+            break
+        case 1:
+            for j in 0..<3 {
+                let v = UILabel()
+                //v.translatesAutoresizingMaskIntoConstraints = false
+                v.text = "columns\(j)"
+                v.grid.rows = 1
+                v.backgroundColor = Color.white
+                container.grid.views.append(v)
+            }
+            break
+        case 2:
+            for j in 0..<4 {
+                let v = UILabel()
+                //v.translatesAutoresizingMaskIntoConstraints = false
+                v.text = "columns\(j)"
+                v.grid.rows = 2
+                v.backgroundColor = Color.white
+                container.grid.views.append(v)
+            }
+            break
+        default:
+            break
+        }
+        
     }
 }
 
