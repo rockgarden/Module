@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/wangkan/Documents/Module/Material/build/Release-iphonesimulator/Material.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Material-Swift.h",
+          'external-contents': "/Users/wangkan/Documents/Module/Material/build/Release-iphonesimulator/Material.framework/Headers/Material-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Material.h",
+          'external-contents': "/Users/wangkan/Documents/Module/Material/Material/Material.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/wangkan/Documents/Module/Material/build/Release-iphonesimulator/Material.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/wangkan/Documents/Module/Material/build/Material.build/Release-iphonesimulator/Material.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
