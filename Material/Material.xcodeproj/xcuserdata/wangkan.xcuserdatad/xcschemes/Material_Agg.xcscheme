@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C21FD41A1F4EBC9E002589E8"
-               BuildableName = "Material_iOS"
-               BlueprintName = "Material_iOS"
+               BlueprintIdentifier = "44EF199F1EAE17600028B825"
+               BuildableName = "Material_Agg"
+               BlueprintName = "Material_Agg"
                ReferencedContainer = "container:Material.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C21FD41A1F4EBC9E002589E8"
-            BuildableName = "Material_iOS"
-            BlueprintName = "Material_iOS"
+            BlueprintIdentifier = "44EF199F1EAE17600028B825"
+            BuildableName = "Material_Agg"
+            BlueprintName = "Material_Agg"
             ReferencedContainer = "container:Material.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C21FD41A1F4EBC9E002589E8"
-            BuildableName = "Material_iOS"
-            BlueprintName = "Material_iOS"
+            BlueprintIdentifier = "44EF199F1EAE17600028B825"
+            BuildableName = "Material_Agg"
+            BlueprintName = "Material_Agg"
             ReferencedContainer = "container:Material.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
