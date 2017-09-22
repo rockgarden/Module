@@ -268,7 +268,7 @@ open class AnimatedTabBarController: UITabBarController {
     
     // MARK: actions
     
-    open func tapHandler(_ gesture:UIGestureRecognizer) {
+    @objc open func tapHandler(_ gesture:UIGestureRecognizer) {
         
         guard let items = tabBar.items as? [AnimatedTabBarItem],
             let gestureView = gesture.view else {

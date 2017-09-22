@@ -66,7 +66,6 @@
 		440DA6611E9D1553005A87C4 /* AppSnackbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440DA6471E9D1553005A87C4 /* AppSnackbarController.swift */; };
 		440DA6621E9D1553005A87C4 /* AppToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440DA6481E9D1553005A87C4 /* AppToolbarController.swift */; };
 		440DA6661E9D1640005A87C4 /* Graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440DA6641E9D1640005A87C4 /* Graph.framework */; };
-		440DA6671E9D1640005A87C4 /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440DA6651E9D1640005A87C4 /* Motion.framework */; };
 		440DA67F1E9D17B0005A87C4 /* ashton.png in Resources */ = {isa = PBXBuildFile; fileRef = 440DA66B1E9D17B0005A87C4 /* ashton.png */; };
 		440DA6801E9D17B0005A87C4 /* charles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 440DA66C1E9D17B0005A87C4 /* charles.jpg */; };
 		440DA6811E9D17B0005A87C4 /* daniel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 440DA66D1E9D17B0005A87C4 /* daniel.jpg */; };
@@ -201,7 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				440DA6981E9D183A005A87C4 /* Motion.framework in Frameworks */,
-				440DA6671E9D1640005A87C4 /* Motion.framework in Frameworks */,
 				440DA6661E9D1640005A87C4 /* Graph.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,7 +356,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = rockgarden;
 				TargetAttributes = {
 					440DA5DF1E9D13C6005A87C4 = {
@@ -506,7 +504,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -514,7 +514,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -556,7 +560,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -564,7 +570,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -644,6 +654,7 @@
 				440DA5F41E9D13C6005A87C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

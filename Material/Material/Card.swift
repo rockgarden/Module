@@ -202,7 +202,7 @@ open class Card: PulseView {
     }
     
     /**
-     Prepares the view instance when intialized. When subclassing,
+     @objc   Prepares the view instance when intialized. When subclassing,
      it is recommended to override the prepare method
      to initialize property values and other setup operations.
      The super.prepare method should always be called immediately
