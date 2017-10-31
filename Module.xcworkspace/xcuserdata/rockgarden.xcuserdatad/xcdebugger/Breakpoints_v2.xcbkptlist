@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sample/Sample/PhotoCollectionViewController.swift"
@@ -22,7 +22,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sample/Sample/UITabBarVC.swift"
@@ -33,44 +33,12 @@
             endingLineNumber = "35"
             landmarkName = "prefersStatusBarHidden"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Sample.UITabBarVC.prefersStatusBarHidden.getter : Swift.Bool"
-                  moduleName = "Sample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rockgarden/GitHub/Module/Sample/Sample/UITabBarVC.swift"
-                  timestampString = "521878021.221203"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Sample.UITabBarVC.(prefersStatusBarHidden.getter : Swift.Bool).(implicit closure #1)"
-                  moduleName = "Sample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rockgarden/GitHub/Module/Sample/Sample/UITabBarVC.swift"
-                  timestampString = "521878021.226091"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "8">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sample/Sample/UITabBarVC.swift"
@@ -81,54 +49,32 @@
             endingLineNumber = "31"
             landmarkName = "preferredStatusBarStyle"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Sample.UITabBarVC.preferredStatusBarStyle.getter : __C.UIStatusBarStyle"
-                  moduleName = "Sample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rockgarden/GitHub/Module/Sample/Sample/UITabBarVC.swift"
-                  timestampString = "521878021.238098"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "23">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Sample.UITabBarVC.(preferredStatusBarStyle.getter : __C.UIStatusBarStyle).(implicit closure #1)"
-                  moduleName = "Sample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rockgarden/GitHub/Module/Sample/Sample/UITabBarVC.swift"
-                  timestampString = "521878021.242875"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "13">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sample/Sample/CardVC.swift"
-            timestampString = "521877002.980489"
+            timestampString = "531156892.93959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
             endingLineNumber = "109"
             landmarkName = "prepareImageCard()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
