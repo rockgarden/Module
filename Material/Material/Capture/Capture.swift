@@ -1031,7 +1031,7 @@ extension Capture {
                 
                 s.movieOutputURL = s.uniqueURL()
                 if let v = s.movieOutputURL {
-                    s.movieOutput.startRecording(to: v as URL!, recordingDelegate: s)
+                    s.movieOutput.startRecording(to: v as URL, recordingDelegate: s)
                 }
             }
         }
